@@ -7,10 +7,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import com.wow.app.random.adapters.MainAdapter;
-import com.wow.app.random.interfaces.IWorker;
 import com.wow.app.random.utilities.Constants;
 
-public class Producer extends Activity implements IWorker {
+public class Producer extends Activity {
 
     public Producer(final List<String> dataArray, final MainAdapter mainAdapter) {
         Timer timer = new Timer();
@@ -23,8 +22,7 @@ public class Producer extends Activity implements IWorker {
         }, 0, Constants.PRODUCER_SECONDS);
     }
 
-    @Override
-    public void addRow(final List<String> dataArray, final MainAdapter mainAdapter) {
+    private void addRow(final List<String> dataArray, final MainAdapter mainAdapter) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {

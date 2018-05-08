@@ -1,16 +1,17 @@
 package com.wow.app.random.workers;
 
 import android.app.Activity;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import com.wow.app.random.adapters.MainAdapter;
-import com.wow.app.random.interfaces.IWorker;
 import com.wow.app.random.utilities.Constants;
 
-public class Consumer extends Activity implements IWorker {
+public class Consumer extends Activity {
 
     public Consumer(final List<String> dataArray, final MainAdapter mainAdapter) {
         Timer timer = new Timer();
@@ -18,18 +19,21 @@ public class Consumer extends Activity implements IWorker {
             @Override
             public void run() {
                 // Adding a row into RecyclerView
-                addRow(dataArray, mainAdapter);
+                removeRow(dataArray, mainAdapter);
             }
         }, 0, Constants.CONSUMER_SECONDS);
     }
 
-    @Override
-    public void addRow(final List<String> dataArray, final MainAdapter mainAdapter) {
+    public void removeRow(final List<String> dataArray, final MainAdapter mainAdapter) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                dataArray.add("This row is added by Consumer");
-                mainAdapter.notifyDataSetChanged();
+                if (dataArray.size() > 0) {
+                    dataArray.remove(dataArray.size() - 1);
+                    mainAdapter.notifyDataSetChanged();
+                    return;
+                }
+                Log.d(Constants.TAG, "No row is remainig to remove");
             }
         });
     }
