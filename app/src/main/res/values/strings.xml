@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Random</string>
+    <string name="button_producer">Producer</string>
+    <string name="button_consumer">Consumer</string>
+</resources>
