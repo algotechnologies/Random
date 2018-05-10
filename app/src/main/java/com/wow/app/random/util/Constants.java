@@ -1,4 +1,4 @@
-package com.wow.app.random.utilities;
+package com.wow.app.random.util;
 
 public class Constants {
 

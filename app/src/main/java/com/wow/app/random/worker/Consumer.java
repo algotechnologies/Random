@@ -1,15 +1,14 @@
-package com.wow.app.random.workers;
+package com.wow.app.random.worker;
 
 import android.app.Activity;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.wow.app.random.adapters.MainAdapter;
-import com.wow.app.random.utilities.Constants;
+import com.wow.app.random.adapter.MainAdapter;
+import com.wow.app.random.util.Constants;
 
 public class Consumer extends Activity {
 

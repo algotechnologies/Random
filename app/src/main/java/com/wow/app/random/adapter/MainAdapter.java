@@ -1,4 +1,4 @@
-package com.wow.app.random.adapters;
+package com.wow.app.random.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import com.wow.app.random.R;
-import com.wow.app.random.holders.MainViewHolder;
+import com.wow.app.random.holder.MainViewHolder;
 
 public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
 

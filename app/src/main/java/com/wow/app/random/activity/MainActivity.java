@@ -1,4 +1,4 @@
-package com.wow.app.random;
+package com.wow.app.random.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,8 +10,9 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.wow.app.random.adapters.MainAdapter;
-import com.wow.app.random.workers.*;
+import com.wow.app.random.R;
+import com.wow.app.random.adapter.MainAdapter;
+import com.wow.app.random.worker.*;
 
 public class MainActivity extends AppCompatActivity {
 

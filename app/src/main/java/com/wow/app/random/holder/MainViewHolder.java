@@ -1,4 +1,4 @@
-package com.wow.app.random.holders;
+package com.wow.app.random.holder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
